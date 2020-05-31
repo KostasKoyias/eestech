@@ -2,10 +2,16 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Data & Configs
 *.pkl
 *.wav
-README.md
+input
 experiments
+README.md
+working
+*.csv
+
 
 # C extensions
 *.so

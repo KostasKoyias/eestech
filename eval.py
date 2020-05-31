@@ -1,8 +1,8 @@
 import pandas as pd
 
 # configs
-LABELS = '/home/kostas/Desktop/coding/contests/kaggle/eestech/input/2020-athens-eestech-challenge/data/1.csv'
-SUBMISSION = 'sub.csv'
+LABELS = '1.csv'
+SUBMISSION = 'submission.csv'
 
 # load our predictions as well as the ground truth and sort by id
 sub = pd.read_csv(SUBMISSION).sort_values(by='id')['category']
