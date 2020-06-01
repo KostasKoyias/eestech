@@ -12,7 +12,10 @@ the highest amongst all teams.
 ## How to run it
 
 First off, fork or download and unzip the code under a Unix-like environment.
-Once at the repository root, run the following command
+Then download the dataset from
+[here](https://drive.google.com/file/d/1x2guEnhRjWxBlO0RRgxeq_loAsjUbBmt/view?usp=sharing)
+and move it to the root directory of the repository.
+Then, from repository root, run the following command
 
 ```bash
 bash run.sh
@@ -37,3 +40,21 @@ Interspeech 2019.
 - Loren Lugosch, Brett Meyer, Derek Nowrouzezahrai, and Mirco Ravanelli,
 "Using Speech Synthesis to Train End-to-End Spoken Language Understanding Models",
 ICASSP 2020.
+
+## Dataset
+
+The script will automatically download from
+[here](http://users.uoa.gr/~sdi1500071/eestech/) the following
+
+### input/speakers
+
+A folder containing 10 sub-folders, one for each speaker
+containing a .wav file for each command.
+
+### input/data
+
+The .wav file paths to train, test and validate on.
+
+### no_unfreezing/pretraining -- no_unfreezing/model_state.pth
+
+Binary files keeping the state of the pre-trained model serialized.
