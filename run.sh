@@ -12,26 +12,16 @@ echo " > Extracing speakers from $speakers..."
 tar -C input -xzf $speakers
 rm -f $speakers
 
-function fetch(){
-    dir=$(dirname $1)
-    base=$(basename $1)
-    url=$2/$base
-    echo -en "fetching \e[1;92m$dir\e[0m..."
-    cd $dir && wget -r -np -nH --cut-dirs=1 $url -R "index.html*" &> /dev/null
-    echo -e "\e[1;92mdone\e[0m"
-    cd ..
-}
-
-# Fetch files necessary
-dirs=("input/data"  "no_unfreezing/pretraining")
-
-for dir in ${dirs[@]}
-do
-    if [ ! -e input/$dir ]; then fetch $dir $repo ; fi
-done
+# Fetch data
+echo -en "Fetching data..."
+wget -r -np -nH --cut-dirs=2 $repo -R "index.html*" &> /dev/null
+mv pretraining model_state.pth no_unfreezing
+mv data input
+rm eestech
+echo -e "\e[1;92mdone\e[0m"
 
 # Fetch model state
-cd no_unfreezing && wget $repo/model_state.pth && cd ..
+cd no_unfreezing && wget -O model_state.pth $repo/model_state.pth && cd ..
 
 # Predict and Evaluate
 python3 predict.py

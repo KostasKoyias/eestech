@@ -9,7 +9,7 @@ output/*.csv
 !output/1.csv
 
 # model files
-*.pth
+*.pth*
 no_unfreezing/training
 no_unfreezing/pretraining
 

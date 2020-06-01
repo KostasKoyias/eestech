@@ -13,7 +13,7 @@ the highest amongst all teams.
 
 First off, fork or download and unzip the code under a Unix-like environment.
 Then download the dataset from
-[here](https://drive.google.com/file/d/1x2guEnhRjWxBlO0RRgxeq_loAsjUbBmt/view?usp=sharing)
+[here](https://drive.google.com/uc?id=12xFxMdlEe9puoEU6nwDoqlrCk9EDOr3_&export=download)
 and move it to the root directory of the repository.
 Then, from repository root, run the following command
 
