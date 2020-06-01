@@ -1,0 +1,32 @@
+intent,category
+"activate,lamp,none",1
+"activate,lights,bedroom",2
+"activate,lights,kitchen",3
+"activate,lights,none",4
+"activate,lights,washroom",5
+"activate,music,none",6
+"bring,juice,none",7
+"bring,newspaper,none",8
+"bring,shoes,none",9
+"bring,socks,none",10
+"change language,Chinese,none",11
+"change language,English,none",12
+"change language,German,none",13
+"change language,Korean,none",14
+"change language,none,none",15
+"deactivate,lamp,none",16
+"deactivate,lights,bedroom",17
+"deactivate,lights,kitchen",18
+"deactivate,lights,none",19
+"deactivate,lights,washroom",20
+"deactivate,music,none",21
+"decrease,heat,bedroom",22
+"decrease,heat,kitchen",23
+"decrease,heat,none",24
+"decrease,heat,washroom",25
+"decrease,volume,none",26
+"increase,heat,bedroom",27
+"increase,heat,kitchen",28
+"increase,heat,none",29
+"increase,heat,washroom",30
+"increase,volume,none",31
