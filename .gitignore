@@ -3,16 +3,18 @@ __pycache__/
 # Data & Configs
 *.pkl
 *.wav
-input/*
-!input/*.csv
-working/output/*.csv
-working/!output/1.csv
+input/myinput/*
+!input/myinput/*.csv
+!input/myinput/*.py
+!input/no_unfreezing
+working/data.py
+working/models.py
+working/config.py
+working/output
 *.tar*
 *.gz
 
 # model files
 *.pth*
-working/no_unfreezing/training
-working/no_unfreezing/pretraining
-working/no_unfreezing/experiment.cfg
+input/myinput/no_unfreezing/*
 

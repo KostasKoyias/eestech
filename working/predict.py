@@ -1,10 +1,15 @@
 import os
+from shutil import copyfile as cp
+
+for f in ['data.py', 'config.py', 'models.py']:
+    cp(os.path.join('../input/myinput', f), f)
+
 import data
 import torch
 import models
 import pandas as pd
 import soundfile as sf
-from no_unfreezing.config import *
+from config import *
 from tqdm import tqdm
 
 UNSURE = 31
@@ -18,10 +23,13 @@ def set_label(category, intents):
     category = intents.loc[intents.intent == category]
     return UNSURE if category.empty else category.category.item()
 
+# make output directory
+if not os.path.isfile(OUTPUT): os.makedirs(OUTPUT)
+
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-config = data.read_config('no_unfreezing/no_unfreezing.cfg'); _,_,_=data.get_SLU_datasets(config)
+config = data.read_config('../input/myinput/no_unfreezing/no_unfreezing.cfg'); _,_,_=data.get_SLU_datasets(config)
 model = models.Model(config).eval()
-model.load_state_dict(torch.load('no_unfreezing/model_state.pth', map_location=device)) # load trained model
+model.load_state_dict(torch.load('../input/myinput/no_unfreezing/model_state.pth', map_location=device)) # load trained model
 
 # predict label of each .wav file and store it as a pickle
 test = pd.read_csv(TEST)

@@ -1,8 +1,7 @@
 #!/bin/bash
 repo="http://users.uoa.gr/~sdi1500071/eestech"
 speakers="speakers.tar.gz"
-no_unfreezing="working/no_unfreezing"
-inp="input"
+inp="input/myinput"
 
 # Installing requirements in a virtual environment
 virtualenv venv
@@ -21,7 +20,8 @@ tar -C $inp -xzf $speakers
 # Fetch data & model state
 echo -en "Fetching data..."
 wget -r -np -nH --cut-dirs=2 $repo -R "index.html*" &> /dev/null
-mv pretraining model_state.pth $no_unfreezing
+mkdir $inp/no_unfreezing
+mv pretraining model_state.pth no_unfreezing.cfg $inp/no_unfreezing
 mv data $inp
 rm eestech
 echo -e "\e[1;92mdone\e[0m"
@@ -30,5 +30,5 @@ echo -e "\e[1;92mdone\e[0m"
 cd working && python3 predict.py && python3 eval.py && cd ..
 
 # Clean up and exit
-rm -f working/no_unfreezing/experiment.cfg $speakers
+rm -f $inp/no_unfreezing/experiment.cfg $speakers
 exit 0

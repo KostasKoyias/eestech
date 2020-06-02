@@ -1,5 +1,5 @@
 import pandas as pd
-from no_unfreezing.config import *
+from config import *
 
 # load our predictions as well as the ground truth and sort by id
 sub = pd.read_csv(SUBMISSION).sort_values(by='id')['category']
