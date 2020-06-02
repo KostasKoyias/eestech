@@ -5,11 +5,14 @@ __pycache__/
 *.wav
 input/*
 !input/*.csv
-output/*.csv
-!output/1.csv
+working/output/*.csv
+working/!output/1.csv
+*.tar*
+*.gz
 
 # model files
 *.pth*
-no_unfreezing/training
-no_unfreezing/pretraining
+working/no_unfreezing/training
+working/no_unfreezing/pretraining
+working/no_unfreezing/experiment.cfg
 
