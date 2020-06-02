@@ -15,13 +15,28 @@ First off, fork or download and unzip the code under a Unix-like environment.
 Then download the dataset from
 [here](https://drive.google.com/uc?id=12xFxMdlEe9puoEU6nwDoqlrCk9EDOr3_&export=download)
 and move it to the root directory of the repository.
+Then, install `soundfile` running
+
+```dotnetcli
+/home/eestech $ sudo apt-get install libsndfile1
+```
+
+on Linux
+
+```bash
+/home/eestech $ pip3 install soundfile
+```
+
+on MACOSX
+
 Then, from the repository root, run the following command
 
 ```bash
 /home/eestech $ bash run.sh
 ```
 
-This will download the dataset, labels and pre-trained model from
+This will install the rest of dependencies,
+download the dataset, labels and pre-trained model from
 [here](http://users.uoa.gr/~sdi1500071/eestech/).
 It will take some time.
 Make sure you have at least 3GB of available memory.

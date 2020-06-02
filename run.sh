@@ -4,6 +4,11 @@ speakers="speakers.tar.gz"
 no_unfreezing="working/no_unfreezing"
 inp="input"
 
+# Installing requirements in a virtual environment
+virtualenv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+
 # Extract speakers payload
 if [ ! -e $speakers ]
 then
