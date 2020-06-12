@@ -1,5 +1,14 @@
 # eestech-challenge 2020 in Athens, Greece
 
+## Intro
+
+This is our solution for this year's competition that took part on Kaggle.
+The task was about training chatbot on the famous
+[Fluent Speech Commands Dataset](https://fluent.ai/fluent-speech-commands-a-dataset-for-spoken-language-understanding-research/),
+so that it is able to accurately map spectrograms to actual command categories.
+Please find the corresponding notebook
+[here](https://www.kaggle.com/kkoyias/skrrt?scriptVersionId=35316530).
+
 ## Our Approach
 
 We used a [pre-trained model](https://github.com/lorenlugosch/end-to-end-SLU),
