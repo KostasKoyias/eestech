@@ -51,7 +51,8 @@ It will take some time.
 Make sure you have at least 3GB of available memory.
 After that, the model will predict the labels for all samples
 under `eestech/input/test.csv`. This should last roughly 8 minutes.
-Lastly, the results will be compared to the ground truth, using accuracy as the metric of interest.
+Lastly, the results will be compared to the ground truth(`eestech/working/output/1.csv`),
+using accuracy as the metric of interest.
 
 If you choose to manually download all data needed, then you can run the python script as follows:
 
